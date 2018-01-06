@@ -15,10 +15,12 @@
 <script>
     export default {
         name: "app-header",
-        props: ['title']
+        props: [ 'title' ]
     }
 </script>
 
 <style scoped>
-
+    .jumbotron .display-3 {
+        font-size: 3.5rem;
+    }
 </style>

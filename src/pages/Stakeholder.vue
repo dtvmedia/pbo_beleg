@@ -4,13 +4,14 @@
         <app-header title="Stakeholder"></app-header>
 
         <b-container>
-            <b-table bordered striped v-bind:items="this.$props.stakeholders" v-bind:fields="fields">
+            <b-table striped v-bind:items="this.$props.stakeholders" v-bind:fields="fields" :current-page="currentPage" :per-page="perPage">
                 <template slot="actions" slot-scope="row">
-                    <b-button size="sm" variant="outline-dark"  v-on:click.stop="showEditModal(row.item, $event.target)">
+                    <b-button size="sm" variant="success"  v-on:click.stop="showEditModal(row.item, $event.target)">
                         <i class="fas fa-fw fa-pencil-alt"></i> Edit
                     </b-button>
                 </template>
             </b-table>
+            <b-pagination :total-rows="totalRows" :per-page="perPage" v-model="currentPage" align="center"></b-pagination>
         </b-container>
 
         <!-- Modal Form -->
@@ -41,12 +42,25 @@
         name: "stakeholder",
         data: function () {
             return {
+                /**
+                 * Table Column Definitions
+                 */
                 fields: [
                     { key: 'id', sortable: true },
-                    { key: 'value', sortable: true },
+                    { key: 'value', sortable: true , label: 'Name' },
                     { key: 'actions' },
                 ],
 
+                /**
+                 * Pagination Data
+                 */
+                currentPage: 1,
+                perPage: 10,
+                totalRows: this.$props.stakeholders.length,
+
+                /**
+                 * Form Input Vars
+                 */
                 form: {
                     id: null ,
                     name: null ,

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <router-view v-bind:process="process" v-bind:system="system" v-bind:stakeholders="stakeholders"></router-view>
+        <router-view v-bind:process="process" v-bind:system="system" v-bind:stakeholders="stakeholders" v-bind:locations="locations"></router-view>
     </div>
 </template>
 
@@ -15,6 +15,7 @@
                 system: json.system ,
                 entrypoint: json.entrypoint ,
                 stakeholder_cache: [] ,
+                location_cache: [],
             }
         },
         computed: {
@@ -43,13 +44,37 @@
                 this.stakeholder_cache = stakeholders;
 
                 return stakeholders;
-            }
+            },
+
+            locations: function () {
+                let tmp = [];
+                let locations = [];
+
+                if( this.location_cache.length !== 0 ) {
+                    return this.location_cache;
+                }
+
+                this.process.children.forEach(function ( item ) {
+                    for(let i = 0; i < item.location.length; i++ ) {
+                        let key = item.location[i].substr(item.location[i].lastIndexOf('_') + 1);
+                        Vue.set(tmp, key, item.location[i]);
+                    }
+                });
+
+                tmp.forEach(function ( item ,key ) {
+                    locations.push({ 'id': key, 'value': item });
+                });
+
+                this.location_cache = locations;
+
+                return locations;
+            } ,
         }
     }
 </script>
 
 <style>
-    .btn-outline-dark {
-        background: rgb(255, 255, 255);
+    a {
+        color: #5ddbe6;
     }
 </style>

@@ -38,18 +38,23 @@
 
 <style scoped>
     .bg-process {
-        background-color: rgb(20, 182, 220);
+        background-color: #5ddbe6;
     }
     .nav-link  {
-        min-width: 90px;
+        min-width: 110px;
         text-align: center;
     }
     .nav-link a {
         color: #f0f0f0;
+        font-size:17px;
     }
     .nav-link a.router-link-exact-active, .nav-link a:hover {
         color: #ffffff;
         font-weight: bold;
         text-decoration: none;
+    }
+    .navbar-dark .navbar-brand {
+        color: #007bff;
+        font-weight: bold;
     }
 </style>
