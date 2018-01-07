@@ -63,10 +63,6 @@
         margin-top:40px;
     }
 
-    footer a {
-        color: #5ddbe6;
-    }
-
     .footer-main h5 {
         font-weight: bold;
         font-size:18px;

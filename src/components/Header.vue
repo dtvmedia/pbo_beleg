@@ -23,4 +23,8 @@
     .jumbotron .display-3 {
         font-size: 3.5rem;
     }
+    .jumbotron {
+        background: #d4ecef;
+        color: #35495E;
+    }
 </style>

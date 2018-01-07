@@ -4,7 +4,10 @@
             <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
             <router-link to="/">
-                <b-navbar-brand><i class="fab fa-vuejs"></i> PBO Beleg</b-navbar-brand>
+                <b-navbar-brand>
+                    <img width="24" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAXEQAAFxEByibzPwAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAAinSURBVHhe7Vt7bFNVGJ+vmBCNJsaImhgX/Uei/rP2th3b7u1t95B1DxR8AFvbMQaOISIoIkLdvbcdA2FgREWj0fiKqOERpY91K+hUNET/MFEx+ocmGmPUaEx8TT1+37kHWe/O2nNHL8/9kl+60N7znXO+8z3Or6VsClOYwpkNdV9shn+ffk31nrXl1Wm9OPfo5VL1gnKpFthUjJ3lFaG2q5gp24jFYmfjGPyxLZTmlEsLOstrD3DmzCOsV07Fri1TM0aPP63/7U8Zo/6kXpTqcHzUd2/PaEXNvFHXTe3Atgnphvc9zR1/uG+O1LM12YLUFN7sbe7kjm1lhTp/tGr7ajo/3rytVAfjo0pK+4Eagg3YVf/BVqJm4gTeKMxcgvj3akRqjRJ3XTuRZoULEhZA3KHwJ3Isdi41JghpTnSGFIr+7WmMcsc9yghx+9uIr7ubBA70ETXLmbOVsM6GQ9vwdSM1hkcikE38rmZhcSm9MJM6Ud9KkKr+lcQlzyfg5aKsbF1M3E3hldSYIFyN7Ulf8yLueHmsb6OUX1pHwPv8OVsY3L+B+DPxb5tH+i9k5srKlJSu1b8/AAvUuA/lMYM0iGfBIuJSF/AnNoYSeNEdivziDndPZ+YKwtMSmeVrEVg80CXPI5Vr7qJO4c6Vw7qDW4h/0Ghn5kyEDu2YBov6Ori/n/uQler+BKl5ao25AQ38yY1lZUsXcYXCzzJzEwJDxd3Y/qm3aSF3nDzWthFpdoQoe3uJP2tw55lHOL21Iw/j3weZuXzAB+6oew92h/cwh7gJvp5u4lKKhwLGqwcWJc3u9DJzXHhaI8tpyHDGsBJDsGrTKtP7sDjeHPMIpzZ4oJ8EBhM+Zm48YKARuksCA6pDcSK/st6cUB3EomWCVnqbaEJ8n5kah6o50UshVH7CxMd7fizx5HnaFuFRNkOSM788QmjTo5/UXmDm+AhmDBcmCSiP/IEsxN2fuf5uGou8iVpZ2Qqh0ByNMnN5gMT3OIYK77k8QsjhBtQ8uYaeQt68rAwMJaBCJH5Vs8aVzNzEUJLaM/UHBRMieuBNKItzOogrWDwhekIdxN0Y+S7Y1XURM0fhuWXhjVD2/sFQ4T03lhhyvmXdwovH04wJXknqDzBzhSG/sXE61NNfAkN9/AEtVA8kSPXW+4RyAZLGeKh9gJmjAO9nhcsevGLoCZc9iHvodb5s2LftfGauOOSUvoqWRc6A45g284F3IRxvv1hClJqio77ZHdejLak10mKn7M1ct9xe2Xt3M1HTxmy6MFFUHNpxHizscPCtjdxBrVRzkBCfW2uGQUPxhEi9HQq/2bBt2flSY/iwN1S87OHY0i1R4n8DQhNDjzOPPMLRr3vnYQIt7xBblj0EUlqoFgZAD3MNWIih4FvVI9whAv+VmiKDIlkfiSFWteVe4bKHbW9geMM/EM43siXZhz+lpfAIiRjEZkTZ9RC2vbRJ4S0in3BXwKTIfS+ftOxFusyGR8QhkMDNxKc9xpYyOUBJvA6SId6e+IbGEjaJlsXEPXZOQXFi2QtA2XvmAcj8YokvMAwJfDD+IzQ9l7ClTB6QELeK3xNMD3nmddJJcxdkk7iZvruX0hDj2uQQy7ia6u1hSzg2yLmBi6Ex+j6Qg1sUx5iVONGaJ+4XqghFiR1mY5gor8VopeHZs7LWTNwfz9059xy2hGOHP2100VaSY5BHbFK8d94p3BtMRFr2eleIl720AReeTdDv9wXZ1EsEQs4CAx/Vvr1JLANDkyK/vM4siax5sUta9m7tMO0JlT3o99+DhJ3Sd7NZlxZKJi7T4wW7PM44h+i1yrXLJ50Q8fRUP3KfGfsim56Ffn8o8aecSlzLplx6KMneV+mVWfCeoEDTIt0MdV7gnjCWmD+8nYvNdleo7Jn9vj/Zu4FN1RnIub6rheUzIJ6CamhebJ0CLHvQR9RAZ4kdJm9cK6nMNRj/pnL3GJnLKRyVz/iTySN6D5oXbGJcqtgm4GZVQkdpp+yZQo5F5nIKtuWzHJRFaGJoX1BMPsOyB50kdpQlkbmcgpqO384yrhDpPWHF0qJlEb0/M36PcNlD4QYdEUgWkLmcAhy5t+llSSQUoIlRXo/hDXBC+QxPiOf2hebnRRQpLHvQmyhJ/Xk2peMLOWO4sDu0JZ/pK2hzw90AyPzV21cLx74tmcspwO4/LSyfsY2SwMvWewIte4uXmFnfTtlLa2vYVE4M5NzG6XBTFJPPYNLoXfRy3j0BO0UIC/kFG9/uHJG5PrchczmF/+UzkVwARC+jt+kmzMLEN49Url4m3u8DJyVzOQWUz2AynwnLZ3hPePFB6nUMBaklQpQ94t/uUJkrOUmZyykoGaPRlnyG94T77yIV7tvoF63U+wInyJS5+o5N5nIKkAiTtuQzuON7lywh/n2QQAW/3WHCzHZm8uRCMLPhOvCOsHxGT8uRV95nLCypzOUUlLQ+wLzEXcQ4inieEcutnDJKI3M5BZTPoN4Ly2eipEIMlbl2lk7mcgrQnHTV25DPihJlLtiAwKBeYpnLKZAylM8+FJXPChL7fXrV1ZyRuZwCymfYF0B/MH5RNkhlruHEH47KXE7BlnzGI5weTKhyUndW5nIKcrLvanUo8ZuofGZlEBNp2vhGzj16ARvy1AN4v9fOPWEsze8htOMjczmF0N7YNPDiV6LyGSVsFvud0vGVuZyCnNbsyWdM5gpmjIK/KDulAEdZTD7Dfv9EylxO4ah8VviegMIKylzBkf4r2KOnD4rKZ6zsnXCZyynAHf4y4M8TyWcocylp4wtbv+Y61aCktJXUy5wNoDJXSmtlHz09gfIZeDlfPoOjX/cOrRJZ9rHTG1b5DBMjylyBjHYD+8jpD0iETD7DskcT48kpczmFYEZD+ewvGgpZ44eTWuZyCuD1gabDT0Hm15eyfzqzUJ00Lg8MJXbJOXv/oWoKU5jCFEqDsrL/ALLQrNlFZvSKAAAAAElFTkSuQmCC">
+                    PBO Beleg
+                </b-navbar-brand>
             </router-link>
 
             <b-collapse is-nav id="nav_collapse">
@@ -38,15 +41,17 @@
 
 <style scoped>
     .bg-process {
-        background-color: #5ddbe6;
+        background-color: var(--main-color);
     }
     .nav-link  {
-        min-width: 110px;
+        min-width: 135px;
         text-align: center;
     }
     .nav-link a {
-        color: #f0f0f0;
-        font-size:17px;
+        color: #fdfdfd;
+        font-size:13px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
     }
     .nav-link a.router-link-exact-active, .nav-link a:hover {
         color: #ffffff;
@@ -54,7 +59,7 @@
         text-decoration: none;
     }
     .navbar-dark .navbar-brand {
-        color: #007bff;
+        color: #35495E;
         font-weight: bold;
     }
 </style>
