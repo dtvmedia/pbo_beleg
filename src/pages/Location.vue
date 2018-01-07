@@ -1,7 +1,7 @@
 <template>
     <div>
         <app-navbar></app-navbar>
-        <app-header title="Locations"></app-header>
+        <app-header title="Locations" icon="fa-map-marker-alt"></app-header>
 
         <b-container>
             <b-table striped v-bind:items="this.$props.locations" v-bind:fields="fields" :current-page="currentPage" :per-page="perPage">
@@ -35,10 +35,12 @@
 
 <script>
     import Vue from 'vue';
+    import AppNavbar from "../components/Navbar.vue";
+    import AppHeader from "../components/Header.vue";
     import AppFooter from "../components/Footer.vue";
 
     export default {
-        components: { AppFooter },
+        components: { AppNavbar, AppHeader , AppFooter },
         name: "location",
         data: function () {
             return {

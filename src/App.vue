@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <router-view v-bind:process="process" v-bind:system="system" v-bind:stakeholders="stakeholders" v-bind:locations="locations"></router-view>
-    </div>
+    <router-view v-bind:process="process" v-bind:system="system" v-bind:stakeholders="stakeholders" v-bind:locations="locations"></router-view>
 </template>
 
 <script>

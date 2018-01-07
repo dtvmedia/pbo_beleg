@@ -2,7 +2,7 @@
     <!-- Jumbotron + Create Button -->
     <b-jumbotron fluid>
         <template slot="header">
-            <span>{{ title }}</span>
+            <span><i v-bind:class="'fas fa-fw '+ icon"></i> {{ title }}</span>
             <div class="float-right">
                 <slot>
 
@@ -15,7 +15,7 @@
 <script>
     export default {
         name: "app-header",
-        props: [ 'title' ]
+        props: [ 'title' ,'icon' ]
     }
 </script>
 

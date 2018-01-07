@@ -1,7 +1,7 @@
 <template>
     <div>
         <app-navbar></app-navbar>
-        <app-header v-bind:title="'Process: ' + process.name"></app-header>
+        <app-header v-bind:title="'Process: ' + process.name" icon="fa-cogs"></app-header>
 
         <!-- Table -->
         <b-container>
@@ -69,7 +69,11 @@
                 </tr>
                 <tr>
                     <th>Participation</th>
-                    <td>{{ modalInfo.data.participation }}</td>
+                    <td class="process-badge">
+                        <b-badge v-if="modalInfo.data.participation === 'partial opened'" variant="info">Partial Opened</b-badge>
+                        <b-badge v-if="modalInfo.data.participation === 'closed'" variant="primary">Closed</b-badge>
+                        <b-badge v-if="modalInfo.data.participation === 'open'" variant="warning">Open</b-badge>
+                    </td>
                 </tr>
                 <tr>
                     <th>Participants</th>
@@ -92,10 +96,12 @@
 </template>
 
 <script>
+    import AppNavbar from "../components/Navbar.vue";
+    import AppHeader from "../components/Header.vue";
     import AppFooter from "../components/Footer.vue";
 
     export default {
-        components: { AppFooter },
+        components: { AppNavbar, AppHeader , AppFooter },
         name: "process",
         data: function () {
             return {

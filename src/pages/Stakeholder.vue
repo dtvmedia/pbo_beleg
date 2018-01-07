@@ -1,7 +1,7 @@
 <template>
     <div>
         <app-navbar></app-navbar>
-        <app-header title="Stakeholder"></app-header>
+        <app-header title="Stakeholder" icon="fa-briefcase"></app-header>
 
         <b-container>
             <b-table striped v-bind:items="this.$props.stakeholders" v-bind:fields="fields" :current-page="currentPage" :per-page="perPage">
@@ -35,10 +35,12 @@
 
 <script>
     import Vue from 'vue';
+    import AppNavbar from "../components/Navbar.vue";
+    import AppHeader from "../components/Header.vue";
     import AppFooter from "../components/Footer.vue";
 
     export default {
-        components: { AppFooter },
+        components: { AppNavbar, AppHeader , AppFooter },
         name: "stakeholder",
         data: function () {
             return {
